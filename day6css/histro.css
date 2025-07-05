@@ -11,14 +11,15 @@ header{
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  text-align: center;
 }
 .container figure{
     flex: calc(33.33% - 20px);
     margin: 0;
 }
 .container img{
-    width:240px;
-    height: 240px;
+    width:400px;
+    height: 200px;
     border-radius: 10px;
 }
 .container footer{
@@ -29,4 +30,9 @@ header{
     justify-content: center;
     padding: 30px;
     bottom: 0;
+}
+body{
+    background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtMjE4YmF0Y2gzLW5pbmctMjUuanBn.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
