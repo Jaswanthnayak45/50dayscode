@@ -1,0 +1,36 @@
+.anime{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+.anime img{
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+}
+.anime figure{
+    flex: calc(33.33% - 20px);
+    margin: 0;
+}
+@keyframes slideIn{
+    from{
+        transform: translateX(-80%);
+    }
+    to{
+        transform: translateY(-80%);
+    }
+}
+.anime img{
+   animation-name: slideIn;
+   animation-duration: 10s;
+   animation-timing-function: ease-in-out;
+   animation-direction: alternate;
+   animation-play-state:paused;
+   
+}
+.anime img:hover{
+    animation-play-state: running;
+}
