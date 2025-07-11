@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!--getElementsById-->
+        <p id="demo">Hello</p>
+        <script>
+            const para=document.getElementById("demo");
+            para.style.color="red";
+    </script>
+<!--getElementsByClassName-->
+<p class="text">one</p>
+<p class="text">two</p>
+<script>
+    const item=document.getElementsByClassName("text");
+    for(let i=0;i<item.length;i++){
+        item[i].style.color="blue";
+    }
+</script>
+<!--getElementsByTagName-->
+<p>para 1</p>
+<p>para 2</p>
+<button onclick="x()">click</button>
+<script>
+    let x=()=>{
+    const paras=document.getElementsByTagName("p");
+    paras[2].innerHTML="Changed! by  Index" ;
+    }
+    
+</script>
+<!-- querySelector-->
+ <p class="intro">Hello</p>
+ <script>
+    const element=document.querySelector(".intro");
+    element.style.fontWeight="bold";
+ </script>
+ <!-- querySelectorAll-->
+ <p class="note">Note 1</p>
+<p class="note">Note 2</p>
+<script>
+    const allparaQuery=document.querySelectorAll(".note");
+    for(let i=0;i<allparaQuery.length;i++){
+        allparaQuery[i].style.backgroundColor="lightgray";
+    }   
+ </script>
+ <!-- Document body-->
+  <script>
+    document.body.style.backgroundColor="lightyellow";
+  </script>
+<!-- Document forms-->
+ <form name="myForm">
+<input type="text" name="username">
+ </form>
+ <script>
+const form=document.forms["myForm"];
+form.username.value="John doe";
+</script>
+</body>
+</html>
