@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button id="myButton">click Me</button>
+   <input type="text">
+   <script>
+// click RECOMMENDED TYPE
+document.getElementById("myButton").addEventListener("click",function(){
+            alert("Button was clicked!");
+        });
+// //click NOT RECOMMENDED TYPE
+//         document.getElementById("myElement").addEventListener("click",onclick);
+//         function onclick(){
+//             alert("Button  clicked!");
+//         }
+   </script>
+    <p id="myElement">Hover over me</p>
+     <div class="section">
+        <h2> Keyup event</h2>
+        <input type="text" id="keyup" placeholder="press any key">
+    </div>
+    <input type="text" id="myInput" placeholder="press any key">
+    <select id="myInput">
+        <option>Apple</option>
+        <option>Banana</option>
+    </select>
+    <div class="section">
+        <h2> submit Event</h2>
+        <form id="myForm">
+            <input type="text" id="myInput" placeholder="yourname">
+            <button type="submit" id="dblclick">submit</button>
+        </form>
+
+    </div>
+    
+</body>
+<script src="eventhandling.js"></script>
+</html>
