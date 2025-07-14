@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1 id="demo">Hello</h1>
+        <p class="text">one</p>
+        <p class="text">two</p>
+        <p class="text" id="demo">Hello</p>
+        <button  onclick="x()">click</button>
+        <script>
+            let x=()=>{
+                document.body.style.backgroundColor="lightblue";
+                const para=document.getElementById("demo").innerHTML="Hi";
+                para.style.backgroundColor="red";
+                const paras=document.getElementsByTagName("p");
+                paras[0].innerHTML="Changed! by  Index" ;
+                const item=document.getElementsByClassName("text");
+                for(let i=0;i<item.length;i++){
+                    item[i].style.color="blue";
+                }
+}          
+</script>
+</body>
+</html>
