@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body><div style="display: flex; gap:10px ;color: red; ">
+    <button id="click1" style="background-color: aquamarine;">-</button>
+    <p id="para">0</p>
+    <button id="click2" style="background-color: aquamarine;">+</button>
+    </div>
+    <script>
+        let i=0;
+        document.getElementById("click1").addEventListener("click",function(){
+            i--;
+            document.getElementById("para").innerText=i;
+        });
+        document.getElementById("click2").addEventListener("click",function(){
+            i++;
+            document.getElementById("para").innerText=i;
+        })
+    </script>
+<!-- Another way -->
+ <br><br><br><br>
+
+ <button id="decrement">-</button>
+ <div id="counter">0</div>
+ <button id="increment">+</button> 
+ <script>
+    const counter=document.getElementById("counter");
+    const decrement=document.getElementById("decrement");
+    const increment=document.getElementById("increment");
+    let count=0;
+    decrement.addEventListener("click",function(){
+            i--;
+            counter.innerText=i;
+        });
+        increment.addEventListener("click",function(){
+            i++;
+           counter.innerText=i;
+        })
+ </script>
+
+</body>
+</html>
