@@ -1,0 +1,9 @@
+document.getElementById("myinput").addEventListener("input",function(event){
+document.getElementById("para").innerText=event.target.value;
+});
+document.getElementById("para").addEventListener("dblclick",function(){
+    this.style.color="red";
+});
+document.getElementById("myinput").addEventListener("focus",function(){
+    this.style.backgroundColor="yellow";
+});  
