@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="std"></p>
+    <script>
+        let person=[
+            {rNO:1,name:"jaswanth",age:19},
+            {rNO:2,name:"Anil",age:20}
+        ]
+        let add=person.map(person=>person.name);
+        document.getElementById("std").innerHTML="name: "+add;
+       // document.getElementById("std").innerHTML="name :"+person[1].name+",name:"+person[0].name;
+    </script>
+</body>
+</html>
