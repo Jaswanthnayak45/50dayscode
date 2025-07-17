@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let person={
+        name:"jaswanth",age:19,isstudent:true
+    }
+    console.log(person);//output:{name: 'jaswanth', age: 19, isstudent: true}
+    //To Update a property
+    person.age=20;
+    console.log(person);//output:{name: 'jaswanth', age: 20, isstudent: true}
+    //To Delete a Property
+    delete person.isstudent;
+    console.log(person);//output:{name: 'jaswanth', age: 20}
+//object with Nested-object
+    let student={
+        name:"jaswanth",marks:{
+            maths:100,tel:90,ps:60
+        }
+        ,total:250
+    }
+    console.log(student);
+//function with object
+    function printstd(std){
+        console.log("student "+std.name+" is "+std.age1+" years old");
+    }
+    printstd({name:"jaswanth",age1:19});
+//object in an array
+    let books=[
+        {title:"javascriptBasics",price:300},
+        {title:"AdvanceJS",price:500}
+    ]
+    console.log(books[1].title);//output:AdvanceJS
+    console.log(books);
+</script>
+</body>
+</html>
