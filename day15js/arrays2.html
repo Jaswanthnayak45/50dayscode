@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+    //Destructuring
+        const fruits=['apple','banana','mango'];
+        const [a,b,c]=fruits;
+        console.log(a);//output:apple
+        console.log(b);//output:banana
+
+    //map()
+        let numbers=[1,2,3,4];
+        let Add=numbers.map(num=>num+2);
+        console.log(Add);//output:[3,4,5,6]
+        console.log(numbers);//output:[1,2,3,4]-orginal  array unchanged
+
+    //filter()
+    const number=[1,2,3,4];
+    let evenNumbers=number.filter(num=>num%2===0);
+    console.log(number);//output:[1,2,3,4]-original array unchanged
+    console.log(evenNumbers)//output:[2,4]
+
+    //Reduce()
+    const number1=[1,2,3,4];
+    const sum=number1.reduce((acc,num)=>acc+num,0);
+    console.log(sum)//output:10
+    
+    //multipe Array to Single Array
+    const arrayofarray=[[1,2],[3,4],[5,6]];
+    const flattenedArray=arrayofarray.reduce((acc,currentvalue)=>{
+        return acc.concat(currentvalue);
+    });
+    console.log("original arrray of arrays:",arrayofarray);
+    console.log("flatened array:",flattenedArray);
+    </script>
+</body>
+</html>
