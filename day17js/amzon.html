@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"></p>
+    <script>
+         let electornics=[
+            {name:"laptop pro",category:"Electronics",price:1500 ,stock:5},
+            {name:"keyboard",category:"Electronics",price:120,stock:100},
+            {name:"Wireless mouse",category:"Electronics",price:30,stock:50},
+            {name:"4k moniter",category:"Electronics",price:450,stock:10},
+            {name:"earphones",category:"Electronics",price:1150,stock:0},
+            {name:"shirt",category:"clothes",price:600,stock:10},
+            {name:"jeans",category:"clothes",price:1450,stock:20},
+            {name:"sofa",category:"groceries",price:11450,stock:310},
+            {name:"pendrive",category:"Electronics",price:50,stock:0},
+         ]
+         let amazon=electornics.filter(device=>{
+            return (device.category==="Electronics" && device.stock>0)
+         })
+         let product=amazon.map(device=>{
+            return {
+                productName:device.name,
+                displayPrice:`$${device.price.toFixed(2)}`
+  
+         };
+        })
+        let toatalprice=amazon.reduce((acc,device) => {
+            return acc+(device.price);
+            
+        },0);
+        
+         console.log(electornics);
+         console.log(amazon);
+          console.log(product)
+          console.log("total price : of the electronics products:",toatalprice.toFixed(2));
+         //return {...people,fullname: `${people.firstname} ${people.lastname}`};
+    </script>
+</body>
+</html>
