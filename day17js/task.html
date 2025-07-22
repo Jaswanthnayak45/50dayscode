@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bank Account</h1>
+    <button id="but1">Deposit</button>
+    <button id="but2">Withdraw</button>
+    <button id="but3">Check Balance</button>
+    <p id="para"></p>
+    <script>
+        function createAccount(){
+            let balance=0;
+            return{
+                Deposit:amt => balance+=amt,
+                withDraw: amt=>balance-=amt,
+                getbalance:()=> balance
+            };
+        }
+        const account=createAccount();
+        document.getElementById("but1").addEventListener("click",function(){
+            let amt=Number(("Enter the Deposit money:"));
+            account.Deposit(amt);
+            document.getElementById("para").innerText=`Deposit :${amt}`
+        })
+        document.getElementById("but2").addEventListener("click",function(){
+            let amt=Number(prompt("Enter the Withdraw money:"));
+            account.withDraw(amt);
+            document.getElementById("para").innerText=`withDraw:${amt}`
+        })
+        document.getElementById("but3").addEventListener("click",function(){
+    
+          const bal = account.getbalance();
+            document.getElementById("para").innerText=`current balance:${bal}`
+        })
+ b 
+
+
+    //     withdraw=0;
+    //     deposit=0;;
+    //     balance=0;
+        
+    //     document.getElementById("but1").addEventListener("click",function(){
+    //     let Amount=prompt("Enter the Amount to Deposit");
+    //     balance+=Amount;
+    //     document.getElementById("para").innerHTML="Deposited: "+Amount;
+
+    //     });
+    //      document.getElementById("but2").addEventListener("click",function(){
+    //     let Amo=prompt("Enter the Amount to Withdraw")
+    //     balance-=Amo
+    //         document.getElementById("para").innerHTML="Withdraw "+ withdraw;
+    //     });
+    //      document.getElementById("but3").addEventListener("click",function(){
+        
+    //         document.getElementById("para").innerHTML="Current Balance "+balance;
+    //     });
+        
+        
+
+    // //  alert("Deposited:",Amount);
+       
+    </script>
+</body>
+</html>
